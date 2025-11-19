@@ -1,0 +1,6 @@
+extended email
+copy artifact
+deploy to
+build pipeline
+pipeline stage view
+maven
