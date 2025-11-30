@@ -5,6 +5,20 @@ kubectl expose deployment mynginx --type=NodePort --port=80
 kubectl scale deployment mynginx --replicas=4
 kubectl port-forward svc/mynginx 8081:80
 
+
+============= KOWSHIK ==========
+kubectl create deployment mynginx --image=nginx
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80 --name=mynginx
+kubectl scale deployment mynginx --replicas=4
+kubectl port-forward service/mynginx 8080:80
+======================================
+
+
+==========NAGIOS===========
+docker pull jasonrivers/nagios
+docker run --name nagios4 -p 8086:80 jasonrivers/nagios
+===============================================================================
+
 minikube dashboard (new powershell)
 [10:54 pm, 18/11/2025] Anirudh: docker pull jasonrivers/nagios:latest
 docker rm -f nagiosdemo
