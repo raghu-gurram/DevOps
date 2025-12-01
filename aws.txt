@@ -1,0 +1,15 @@
+ssh -i "myserverkp.pem" ubuntu@ec2-98-80-217-101.compute-1.amazonaws.com
+        sudo apt update
+        sudo apt-get install docker.io
+        sudo apt install git
+        sudo apt install nano
+        git clone https://github.com/Jashwanthb2005/awsexample.git
+        ls
+        cd awsexample
+        nano Dockerfile
+        FROM nginx:alpine
+        COPY . /usr/share/nginx/html
+        sudo docker build -t mywebap .
+        sudo docker run -d -p 80:80 mywebap
+        sudo docker ps
+        sudo docker stop b2db90578568
